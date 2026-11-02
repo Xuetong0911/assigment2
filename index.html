@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="mkuyhuYCeoEngxYVMwxTLf">
+<head data-page-node-id="RpZipxYpaIAEsu3Xz2ZaWI">
+<meta charset="UTF-8" data-page-node-id="RstMvVApH4KrnDhWmAngzj">
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="tqKJqc7fConk9qj0jgAOS7">
+<title>薛彤的知识库 · 网络与新媒体（智能传播）</title>
+<meta name="description" content="薛彤的知识库：网络与新媒体（智能传播）方向的知识分类、主题笔记、检索系统与学科竞赛备赛索引。" data-page-node-id="bX7sHALLiYeCBoZppcP9sR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAF8F4'/%3E%3Crect x='6' y='6' width='20' height='20' fill='none' stroke='%2317150F' stroke-width='2'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%23B4452F'/%3E%3C/svg%3E" data-page-node-id="oVkjbtLLGggix17NjKsxQb">
+<style>
+/* ============ 设计变量 ============ */
+:root{
+  --paper:#FAF8F4;
+  --card:#FFFFFF;
+  --ink:#17150F;
+  --ink-2:#3E3A33;
+  --muted:#8B857A;
+  --line:#E6E1D8;
+  --line-2:#D8D2C6;
+  --accent:#B4452F;
+  --accent-2:#8E3324;
+  --accent-soft:#F5E7E2;
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --nav-h:66px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--accent);color:#fff}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+input{font:inherit;color:inherit}
+svg{display:block}
+mark{background:var(--accent-soft);color:var(--accent-2);padding:0 2px;border-radius:1px}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 32px}
+section{scroll-margin-top:calc(var(--nav-h) + 18px)}
+
+/* ============ 顶部滚动进度 ============ */
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* ============ 悬浮导航 ============ */
+.topbar{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:100;display:flex;align-items:center}
+.topbar::before{
+  content:"";position:absolute;inset:0;
+  background:rgba(250,248,244,0);
+  backdrop-filter:blur(0px);
+  border-bottom:1px solid transparent;
+  transition:background .4s var(--ease),backdrop-filter .4s var(--ease),border-color .4s var(--ease);
+}
+.topbar.scrolled::before{
+  background:rgba(250,248,244,.88);
+  backdrop-filter:blur(14px) saturate(1.2);
+  border-bottom-color:var(--line);
+}
+.nav-in{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:36px;position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.brand-mark{
+  width:15px;height:15px;border:1.5px solid var(--ink);position:relative;display:block;
+  transition:transform .5s var(--ease),border-color .3s;
+}
+.brand-mark::after{
+  content:"";position:absolute;inset:3.5px;background:var(--accent);
+  transform:scale(.4);opacity:0;transition:.35s var(--ease);
+}
+.brand:hover .brand-mark{transform:rotate(45deg)}
+.brand:hover .brand-mark::after{transform:scale(1);opacity:1}
+.brand-txt{display:flex;flex-direction:column;line-height:1.1;font-size:14px;font-weight:600;letter-spacing:.04em}
+.brand-txt em{font-style:normal;font-size:8.5px;letter-spacing:.22em;color:var(--muted);margin-top:4px;font-weight:400}
+.nav-links{display:flex;gap:26px;margin-left:auto}
+.nav-links a{
+  position:relative;font-size:13.5px;color:var(--ink-2);padding:6px 0;letter-spacing:.03em;
+  transition:color .3s;
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--accent);
+  transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);
+}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-links a.active{color:var(--accent-2)}
+.nav-act{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.icon-btn{
+  width:32px;height:32px;display:grid;place-items:center;border:1px solid transparent;border-radius:2px;
+  color:var(--ink-2);transition:.3s var(--ease);
+}
+.icon-btn:hover{border-color:var(--line-2);background:var(--card);color:var(--accent)}
+.nav-cta{
+  font-size:12.5px;padding:6px 15px;border:1px solid var(--line-2);border-radius:2px;color:var(--ink-2);
+  transition:.35s var(--ease);position:relative;overflow:hidden;
+}
+.nav-cta span{position:relative;z-index:1}
+.nav-cta::before{
+  content:"";position:absolute;inset:0;background:var(--ink);
+  transform:translateY(101%);transition:transform .4s var(--ease);
+}
+.nav-cta:hover{color:#fff;border-color:var(--ink)}
+.nav-cta:hover::before{transform:translateY(0)}
+
+/* ============ 右侧悬浮圆点导航 ============ */
+.rail{position:fixed;right:26px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:16px}
+.rail a{position:relative;display:grid;place-items:center;width:12px;height:12px}
+.rail i{
+  width:5px;height:5px;border-radius:50%;background:transparent;border:1px solid var(--line-2);
+  transition:.4s var(--ease);display:block;
+}
+.rail a:hover i{border-color:var(--accent);transform:scale(1.4)}
+.rail a.on i{background:var(--accent);border-color:var(--accent);height:16px;border-radius:3px;width:3px}
+.rail span{
+  position:absolute;right:22px;top:50%;transform:translate(6px,-50%);
+  font-size:11px;white-space:nowrap;color:var(--ink-2);background:var(--card);
+  border:1px solid var(--line);padding:3px 9px;border-radius:2px;
+  opacity:0;pointer-events:none;transition:.35s var(--ease);letter-spacing:.05em;
+}
+.rail a:hover span{opacity:1;transform:translate(0,-50%)}
+
+/* ============ 回到顶部 ============ */
+.to-top{
+  position:fixed;right:24px;bottom:26px;width:42px;height:42px;z-index:90;
+  border:1px solid var(--line-2);background:var(--card);border-radius:50%;
+  display:grid;place-items:center;color:var(--ink-2);
+  opacity:0;transform:translateY(12px);pointer-events:none;
+  transition:.45s var(--ease);
+}
+.to-top.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.to-top:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.to-top svg{transition:transform .35s var(--ease)}
+.to-top:hover svg{transform:translateY(-2px)}
+
+/* ============ 门户 Hero ============ */
+.hero{position:relative;padding:calc(var(--nav-h) + 74px) 0 84px;overflow:hidden}
+.hero::after{
+  content:"";position:absolute;right:-140px;top:40px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(180,69,47,.075),rgba(180,69,47,0) 68%);
+  pointer-events:none;
+}
+.hero-in{display:grid;grid-template-columns:1.55fr .95fr;gap:64px;align-items:start;position:relative;z-index:1}
+.eyebrow{
+  font-size:10.5px;letter-spacing:.28em;color:var(--muted);text-transform:uppercase;
+  display:flex;align-items:center;gap:12px;margin-bottom:26px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--accent);display:block}
+h1{
+  font-size:clamp(38px,5.2vw,60px);line-height:1.22;letter-spacing:-.02em;font-weight:600;
+  isolation:isolate;
+}
+h1 .hl{position:relative;display:inline-block;color:var(--accent)}
+h1 .hl::after{
+  content:"";position:absolute;left:0;right:0;bottom:4px;height:9px;background:var(--accent-soft);
+  z-index:-1;transform:scaleX(0);transform-origin:left;animation:swipe 1s .5s var(--ease) forwards;
+}
+@keyframes swipe{to{transform:scaleX(1)}}
+.lede{margin-top:24px;max-width:520px;color:var(--ink-2);font-size:14.5px;line-height:1.95}
+.lede b{font-weight:600;color:var(--ink);border-bottom:1px solid var(--line-2);padding-bottom:1px}
+
+/* 搜索框 */
+.search{
+  display:flex;align-items:center;gap:12px;background:var(--card);
+  border:1px solid var(--line-2);border-radius:2px;padding:0 16px;
+  transition:.4s var(--ease);position:relative;
+}
+.search:focus-within{border-color:var(--ink);box-shadow:0 8px 28px -18px rgba(23,21,15,.5)}
+.search svg{color:var(--muted);flex:0 0 auto;transition:color .3s}
+.search:focus-within svg{color:var(--accent)}
+.search input{flex:1;border:none;outline:none;background:none;padding:15px 0;font-size:14px;min-width:0}
+.search input::placeholder{color:#A9A39A}
+.search input::-webkit-search-cancel-button{display:none}
+.search kbd{
+  font-family:inherit;font-size:10.5px;color:var(--muted);border:1px solid var(--line);
+  border-radius:2px;padding:1px 6px;line-height:1.6;flex:0 0 auto;
+}
+.search .clear{
+  font-size:11.5px;color:var(--muted);padding:3px 2px;flex:0 0 auto;transition:color .25s;
+}
+.search .clear:hover{color:var(--accent)}
+.search--lg{margin-top:30px;max-width:540px}
+.search--lg input{padding:16px 0}
+.search-hint{margin-top:10px;font-size:11.5px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.search-hint b{font-weight:500;color:var(--ink-2)}
+
+/* 快捷入口 */
+.quick{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
+.quick a{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-2);
+  border:1px solid var(--line);padding:8px 14px;border-radius:2px;background:transparent;
+  transition:.35s var(--ease);
+}
+.quick a i{font-style:normal;font-size:10px;color:var(--muted);transition:.3s}
+.quick a:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);transform:translateY(-2px)}
+.quick a:hover i{color:rgba(255,255,255,.55)}
+
+/* Hero 侧栏 */
+.hero-side{border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:2px;padding:26px 24px;backdrop-filter:blur(6px)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:-26px -24px 22px}
+.stat{background:var(--card);padding:18px 20px;transition:background .35s var(--ease)}
+.stat:hover{background:var(--accent-soft)}
+.stat b{display:block;font-size:26px;font-weight:600;line-height:1.2;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat span{font-size:11px;color:var(--muted);letter-spacing:.05em}
+.side-title{font-size:10.5px;letter-spacing:.2em;color:var(--muted);margin-bottom:14px;text-transform:uppercase}
+.recent{display:flex;flex-direction:column}
+.recent button{
+  text-align:left;display:flex;gap:12px;align-items:baseline;padding:10px 0;
+  border-bottom:1px dashed var(--line);transition:.35s var(--ease);
+}
+.recent button:last-child{border-bottom:none}
+.recent .d{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums;flex:0 0 auto}
+.recent .t{font-size:13px;color:var(--ink-2);line-height:1.5;transition:.3s}
+.recent button:hover{padding-left:6px}
+.recent button:hover .t{color:var(--accent)}
+.keywords{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.keywords span{
+  font-size:11px;color:var(--muted);border:1px solid var(--line);padding:2px 8px;border-radius:2px;
+  transition:.3s var(--ease);
+}
+.keywords span:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* ============ 通用区块标题 ============ */
+.sec{padding:78px 0;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:end;margin-bottom:44px}
+.sec-no{font-size:11px;color:var(--accent);letter-spacing:.16em;font-variant-numeric:tabular-nums;padding-bottom:8px}
+.sec-head h2{font-size:26px;font-weight:600;letter-spacing:.01em;line-height:1.3}
+.sec-head h2 em{
+  display:block;font-style:normal;font-size:9.5px;letter-spacing:.28em;color:var(--muted);
+  text-transform:uppercase;margin-top:7px;font-weight:400;
+}
+.sec-desc{font-size:12.5px;color:var(--muted);max-width:330px;text-align:right;line-height:1.8;padding-bottom:4px}
+
+/* ============ 搭建方法 ============ */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:var(--line);gap:1px}
+.step{background:var(--card);padding:26px 24px 30px;position:relative;overflow:hidden;transition:background .4s var(--ease)}
+.step::before{
+  content:"";position:absolute;left:0;top:0;height:2px;width:100%;background:var(--accent);
+  transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);
+}
+.step:hover::before{transform:scaleX(1)}
+.step:hover{background:#FCFAF6}
+.step .n{font-size:10.5px;letter-spacing:.18em;color:var(--muted);font-variant-numeric:tabular-nums}
+.step h3{font-size:17px;margin:12px 0 3px;font-weight:600;transition:color .3s}
+.step:hover h3{color:var(--accent-2)}
+.step .en{font-size:9.5px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+.step p{font-size:12.5px;color:var(--ink-2);line-height:1.85;margin-top:14px}
+.step .tagline{display:inline-block;margin-top:16px;font-size:11px;color:var(--accent);opacity:0;transform:translateY(6px);transition:.45s var(--ease)}
+.step:hover .tagline{opacity:1;transform:translateY(0)}
+.principles{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;align-items:center}
+.principles b{font-size:11px;letter-spacing:.1em;color:var(--muted);font-weight:400;margin-right:4px}
+.principles span{
+  font-size:12px;border:1px solid var(--line-2);padding:5px 13px;border-radius:999px;
+  transition:.35s var(--ease);
+}
+.principles span:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);transform:translateY(-2px)}
+
+/* ============ 知识分类 ============ */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cat-card{
+  background:var(--card);padding:28px 26px 24px;text-align:left;position:relative;overflow:hidden;
+  transition:background .45s var(--ease),transform .45s var(--ease);
+}
+.cat-card .ico{color:var(--ink-2);margin-bottom:20px;transition:.45s var(--ease)}
+.cat-card:hover .ico{color:var(--accent);transform:translateY(-3px)}
+.cat-card .cn{font-size:16px;font-weight:600;display:block;transition:color .35s}
+.cat-card:hover .cn{color:var(--accent-2)}
+.cat-card .en{font-size:9.5px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;display:block;margin-top:5px}
+.cat-card p{font-size:12.5px;color:var(--muted);line-height:1.85;margin-top:14px;min-height:46px}
+.cat-foot{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+.cat-foot .cnt{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.cat-foot .arrow{transition:transform .45s var(--ease),color .3s;color:var(--line-2)}
+.cat-card:hover .cat-foot .arrow{transform:translateX(6px);color:var(--accent)}
+.cat-card::after{
+  content:"";position:absolute;right:-40px;bottom:-40px;width:120px;height:120px;border-radius:50%;
+  background:var(--accent-soft);opacity:0;transform:scale(.6);transition:.55s var(--ease);
+}
+.cat-card:hover::after{opacity:.7;transform:scale(1)}
+
+/* ============ 笔记 + 详情 ============ */
+.notes-toolbar{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:30px;
+}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{
+  font-size:12px;padding:5px 13px;border:1px solid var(--line);border-radius:999px;color:var(--ink-2);
+  transition:.35s var(--ease);white-space:nowrap;
+}
+.chip em{font-style:normal;color:var(--muted);font-size:10.5px;margin-left:3px}
+.chip:hover{border-color:var(--ink-2);transform:translateY(-1px)}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip.on em{color:rgba(255,255,255,.6)}
+.toolbar-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.note-count{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.search--sm{width:210px;padding:0 12px;background:transparent;border-color:var(--line)}
+.search--sm input{padding:8px 0;font-size:12.5px}
+.search--sm svg{width:14px;height:14px}
+
+.notes-grid{display:grid;grid-template-columns:370px 1fr;gap:0;border-top:1px solid transparent}
+.note-list{border-right:1px solid var(--line);max-height:760px;overflow-y:auto;padding-right:0}
+.note-item{
+  display:block;width:100%;text-align:left;padding:20px 20px 20px 18px;border-bottom:1px solid var(--line);
+  position:relative;transition:.4s var(--ease);background:transparent;
+}
+.note-item::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--accent);
+  transform:scaleY(0);transition:transform .4s var(--ease);
+}
+.note-item:hover{background:#FCFAF6;padding-left:24px}
+.note-item.is-active{background:var(--card);padding-left:24px}
+.note-item.is-active::before{transform:scaleY(1)}
+.ni-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:7px}
+.ni-cat{font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase}
+.ni-date{font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ni-title{display:block;font-size:14.5px;font-weight:600;line-height:1.55;transition:color .3s}
+.note-item:hover .ni-title{color:var(--accent-2)}
+.ni-ex{display:block;font-size:12px;color:var(--muted);line-height:1.75;margin-top:7px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.note-item.is-active .ni-ex{color:var(--ink-2)}
+
+.reader-wrap{padding-left:44px;min-width:0}
+.reader{position:sticky;top:calc(var(--nav-h) + 22px);max-height:calc(100vh - 116px);overflow-y:auto;padding-right:10px;scroll-margin-top:calc(var(--nav-h) + 16px)}
+.reader::-webkit-scrollbar{width:4px}
+.reader::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:2px}
+.reader::-webkit-scrollbar-track{background:transparent}
+.reader-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.r-cat{font-size:10.5px;letter-spacing:.12em;color:var(--accent);border:1px solid var(--accent-soft);background:var(--accent-soft);padding:3px 9px;border-radius:2px}
+.r-meta{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.r-title{font-size:27px;line-height:1.42;font-weight:600;letter-spacing:-.01em;max-width:96%}
+.r-sub{font-size:13px;color:var(--muted);margin-top:12px;line-height:1.85;padding-left:14px;border-left:2px solid var(--line-2)}
+.prose{margin-top:26px;max-width:680px;font-size:14.2px;line-height:2;color:var(--ink-2)}
+.prose p{margin-bottom:15px}
+.prose p:last-child{margin-bottom:0}
+.prose h4{font-size:14.5px;color:var(--ink);font-weight:600;margin:26px 0 10px;display:flex;align-items:center;gap:9px}
+.prose h4::before{content:"";width:12px;height:1px;background:var(--accent);display:block}
+.prose ul{list-style:none;margin:0 0 16px}
+.prose li{position:relative;padding-left:18px;margin-bottom:7px;font-size:13.8px}
+.prose li::before{content:"";position:absolute;left:4px;top:12px;width:4px;height:4px;background:var(--accent);border-radius:50%}
+.prose blockquote{
+  margin:22px 0;padding:16px 20px;background:var(--card);border-left:2px solid var(--accent);
+  font-size:13.5px;color:var(--ink);line-height:1.9;
+}
+.prose blockquote span{display:block;margin-top:8px;font-size:11px;color:var(--muted);letter-spacing:.05em}
+.callout{
+  display:flex;gap:12px;margin:22px 0 4px;padding:14px 16px;border:1px dashed var(--line-2);
+  font-size:12.8px;line-height:1.85;color:var(--ink-2);background:rgba(255,255,255,.6);
+}
+.callout b{flex:0 0 auto;font-size:10.5px;letter-spacing:.08em;color:var(--accent);padding-top:2px}
+.r-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:30px;padding-top:20px;border-top:1px solid var(--line);flex-wrap:wrap}
+.r-tags{display:flex;gap:6px;flex-wrap:wrap}
+.r-tags span{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:2px 8px;border-radius:2px;transition:.3s}
+.r-tags span:hover{color:var(--accent);border-color:var(--accent)}
+.r-actions{display:flex;gap:8px}
+.act{
+  font-size:11.5px;padding:6px 14px;border:1px solid var(--line-2);border-radius:2px;color:var(--ink-2);
+  display:inline-flex;align-items:center;gap:6px;transition:.35s var(--ease);position:relative;overflow:hidden;
+}
+.act::before{content:"";position:absolute;inset:0;background:var(--ink);transform:translateY(101%);transition:transform .35s var(--ease)}
+.act span{position:relative;z-index:1}
+.act:hover{color:#fff;border-color:var(--ink)}
+.act:hover::before{transform:translateY(0)}
+.act.done{border-color:var(--accent);color:var(--accent)}
+.act.done span{color:var(--accent)}
+.act.done:hover{color:#fff}
+.act.done:hover::before{background:var(--accent)}
+.r-rel{margin-top:22px;padding-top:18px;border-top:1px dashed var(--line);display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.r-rel .lbl{font-size:10.5px;letter-spacing:.14em;color:var(--muted);flex:0 0 auto}
+.rel-link{font-size:12.5px;color:var(--ink-2);border-bottom:1px solid var(--line-2);padding-bottom:1px;transition:.3s;text-align:left}
+.rel-link:hover{color:var(--accent);border-color:var(--accent)}
+.fade-in{animation:fadeIn .45s var(--ease)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* 空状态 */
+.empty{padding:70px 20px;text-align:center;color:var(--muted)}
+.empty b{display:block;font-size:14px;color:var(--ink-2);font-weight:500;margin-bottom:8px}
+.empty p{font-size:12.5px}
+
+/* ============ 竞赛 ============ */
+.comps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.comp{
+  border:1px solid var(--line);background:var(--card);padding:24px 24px 22px;position:relative;
+  transition:.45s var(--ease);overflow:hidden;
+}
+.comp:hover{transform:translateY(-3px);border-color:var(--line-2);box-shadow:0 18px 40px -32px rgba(23,21,15,.6)}
+.comp::before{
+  content:"";position:absolute;left:0;top:0;width:2px;height:0;background:var(--accent);
+  transition:height .5s var(--ease);
+}
+.comp:hover::before{height:100%}
+.comp-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.comp .idx{font-size:10px;color:var(--muted);letter-spacing:.16em;font-variant-numeric:tabular-nums}
+.comp .lvl{font-size:10px;color:var(--accent);border:1px solid var(--accent-soft);background:var(--accent-soft);padding:2px 8px;border-radius:2px}
+.comp h3{font-size:16px;font-weight:600;line-height:1.55;margin:10px 0 4px;transition:color .35s}
+.comp:hover h3{color:var(--accent-2)}
+.comp .alias{font-size:11px;color:var(--muted);letter-spacing:.04em}
+.comp .meta-line{font-size:11.5px;color:var(--muted);margin-top:12px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.comp .meta-line i{font-style:normal;width:3px;height:3px;background:var(--line-2);border-radius:50%;display:inline-block}
+.comp .desc{font-size:12.8px;color:var(--ink-2);line-height:1.85;margin-top:12px}
+.comp-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.comp-tags span{font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:1px 8px;border-radius:999px}
+.comp-tips{
+  max-height:0;opacity:0;overflow:hidden;transition:max-height .5s var(--ease),opacity .35s var(--ease),margin .4s var(--ease);
+  margin-top:0;padding-top:0;border-top:1px dashed transparent;
+}
+.comp:hover .comp-tips{max-height:180px;opacity:1;margin-top:16px;padding-top:14px;border-top-color:var(--line)}
+.comp-tips .k{font-size:10px;letter-spacing:.14em;color:var(--accent);display:block;margin-bottom:6px}
+.comp-tips p{font-size:12px;color:var(--ink-2);line-height:1.85}
+.comp .bar{display:none}
+.comp-note{margin-top:18px;font-size:11.5px;color:var(--muted);text-align:right}
+
+/* ============ 页脚 ============ */
+.footer{border-top:1px solid var(--line);background:#F6F3ED;padding-top:56px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1.25fr;gap:56px;padding-bottom:44px}
+.foot-brand{display:flex;align-items:center;gap:11px;margin-bottom:16px}
+.foot-brand .brand-mark{border-color:var(--ink)}
+.foot-brand b{font-size:14px;letter-spacing:.04em;font-weight:600}
+.foot-about{font-size:12.5px;color:var(--muted);line-height:1.95;max-width:300px}
+.foot-about b{color:var(--ink-2);font-weight:500}
+.foot-col h4{font-size:10.5px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:16px;font-weight:400}
+.foot-links{display:flex;flex-direction:column;gap:9px}
+.foot-links a{font-size:12.5px;color:var(--ink-2);width:fit-content;position:relative;transition:.3s}
+.foot-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.foot-links a:hover{color:var(--accent)}
+.foot-links a:hover::after{transform:scaleX(1)}
+.changelog{list-style:none;display:flex;flex-direction:column;gap:14px}
+.changelog li{display:grid;grid-template-columns:44px 64px 1fr;gap:10px;align-items:baseline}
+.changelog .ver{font-size:10.5px;color:var(--accent);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.changelog .date{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.changelog p{font-size:12px;color:var(--ink-2);line-height:1.8}
+.foot-bottom{
+  border-top:1px solid var(--line);padding:20px 0 26px;display:flex;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);line-height:1.8;
+}
+.foot-bottom .l{display:flex;gap:16px;flex-wrap:wrap}
+.foot-bottom em{font-style:normal;color:var(--ink-2)}
+.foot-bottom a{border-bottom:1px solid transparent;transition:.3s}
+.foot-bottom a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* Toast */
+.toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,16px);z-index:200;
+  background:var(--ink);color:var(--paper);font-size:12px;padding:9px 18px;border-radius:2px;
+  opacity:0;pointer-events:none;transition:.4s var(--ease);letter-spacing:.04em;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* 滚动条 */
+.note-list::-webkit-scrollbar{width:5px}
+.note-list::-webkit-scrollbar-track{background:transparent}
+.note-list::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:2px}
+
+/* 进场动画：仅在 JS 可用时启用，避免脚本异常导致内容不可见 */
+.js-reveal .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js-reveal .reveal.in{opacity:1;transform:none}
+
+/* ============ 响应式 ============ */
+@media (max-width:1080px){
+  .hero-in{grid-template-columns:1fr;gap:44px}
+  .hero-side{max-width:560px}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .notes-grid{grid-template-columns:320px 1fr}
+  .reader-wrap{padding-left:30px}
+  .r-title{font-size:24px}
+  .rail{display:none}
+}
+@media (max-width:860px){
+  .wrap{padding:0 22px}
+  .nav-in{padding:0 22px;gap:16px}
+  .nav-links{display:none}
+  .notes-grid{grid-template-columns:1fr;border:1px solid var(--line)}
+  .note-list{border-right:none;max-height:none;border-bottom:1px solid var(--line)}
+  .reader-wrap{padding:26px 20px 30px}
+  .reader{position:static;max-height:none;overflow:visible;padding-right:0}
+  .step .tagline{display:none}
+  .comps{grid-template-columns:1fr}
+  .comp-tips{max-height:none;opacity:1;margin-top:14px;padding-top:12px;border-top-color:var(--line)}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+  .sec-head{grid-template-columns:auto 1fr;gap:14px}
+  .sec-desc{grid-column:1/-1;text-align:left;max-width:100%}
+  .sec{padding:56px 0}
+  .hero{padding-top:calc(var(--nav-h) + 48px)}
+  .search--sm{width:100%;order:3}
+  .toolbar-right{width:100%;margin-left:0;justify-content:space-between}
+  .changelog li{grid-template-columns:44px 1fr;row-gap:2px}
+  .changelog p{grid-column:1/-1}
+}
+@media (max-width:560px){
+  h1{font-size:32px}
+  .eyebrow{letter-spacing:.16em;font-size:9.5px}
+  .search kbd{display:none}
+  .cats{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .stats{margin:-26px -20px 20px}
+  .hero-side{padding:26px 20px}
+  .sec-head h2{font-size:22px}
+  .r-title{font-size:21px}
+  .note-list{max-height:none}
+  .to-top{right:16px;bottom:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001s!important;transition-duration:.001s!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body data-page-node-id="JyRnIOSpkzVgGhd6XSwbBZ">
+
+<div class="progress" id="progress" data-page-node-id="cK9IR6Nhha8Xob2omTGJ6O"></div>
+
+<!-- ============ 顶部悬浮导航 ============ -->
+<header class="topbar" id="topbar" data-page-node-id="UDO44RATFjbGq69W8h9s1F">
+  <div class="nav-in" data-page-node-id="OIpXvOJ1AitRQViWTuDhR4">
+    <a class="brand" href="#portal" data-page-node-id="AoYZwsykRWtXwvZ30PQxCr">
+      <span class="brand-mark" data-page-node-id="jAYGZfDUvKvJo27lgDMOTA"></span>
+      <span class="brand-txt" data-page-node-id="TnEOYC6EWN8pDDYtPqO0z8">薛彤的知识库<em data-page-node-id="iqGThhI3b90EjU0YqilreZ">KNOWLEDGE BASE</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks" data-page-node-id="dTGyNXsM2xhKNNSWi5IoIO">
+      <a href="#portal" class="active" data-page-node-id="rg4k65Af5v3g9jcoruFzRi">门户</a>
+      <a href="#method" data-page-node-id="c3ChtEjd5W84IzBFEhstq0">方法</a>
+      <a href="#cats" data-page-node-id="VSXThREtfAA27kCCh7oomv">分类</a>
+      <a href="#notes" data-page-node-id="c0Jl0C4J0CUfVRQeMVY2Z2">笔记</a>
+      <a href="#comps" data-page-node-id="WGQ9ueYUEcTPjQaKqAFjHl">竞赛</a>
+    </nav>
+    <div class="nav-act" data-page-node-id="a3A2dokvAPHxEk4noPRvuX">
+      <button class="icon-btn" id="navSearch" aria-label="搜索" data-page-node-id="tKIC3LEIfh1NPM5V0718FW">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" data-page-node-id="uLfM7ZJ1Jejpwjh5UQCSDA">
+          <circle cx="11" cy="11" r="6.5" data-page-node-id="X0T6mTHraXJ534itupVrHN"/><path d="M16 16l4.5 4.5" stroke-linecap="round" data-page-node-id="4RYVBrlqa1PMoGfggb4DgM"/>
+        </svg>
+      </button>
+      <a class="nav-cta" href="#footer" data-page-node-id="yi8pxLDKQvCeWnGCk1HeMs"><span data-page-node-id="UIOulBiNJMJvZYD0csAlE9">关于本站</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 右侧悬浮圆点 ============ -->
+<nav class="rail" id="rail" aria-label="页面导航" data-page-node-id="2pkRMvTZDh7GJiT8HSCF0J">
+  <a href="#portal" data-sec="portal" data-page-node-id="DJLHNE6vadCOhdnGnejMJg"><i data-page-node-id="Hzde9EXT7AEu2IMf6psXzj"></i><span data-page-node-id="Z82bYo5pUOzMcQ8dHObT1m">首页门户</span></a>
+  <a href="#method" data-sec="method" data-page-node-id="273OOBC1IztlKSS918JE9g"><i data-page-node-id="Z3VVjGvfGcVq2fhYmEbrkq"></i><span data-page-node-id="opKU58ZWay4iGcqPPliaBe">搭建方法</span></a>
+  <a href="#cats" data-sec="cats" data-page-node-id="k35fFcNg5t8yL7Iy64wQXA"><i data-page-node-id="VLbGHj01TU0f66d4bVv8ay"></i><span data-page-node-id="cgkQxBCsbuSWdKTnJ2IyHH">知识分类</span></a>
+  <a href="#notes" data-sec="notes" data-page-node-id="Bgffyyt9sJUbz94cv6Pr6K"><i data-page-node-id="nCNK8oMLqTZdKp7RVCQ7cx"></i><span data-page-node-id="wUaszg9AhkA9Nwt837Z9YE">笔记详情</span></a>
+  <a href="#comps" data-sec="comps" data-page-node-id="eKnXrCB22AmnFvG0Bc90Sw"><i data-page-node-id="kMaYCwHLSEUJTtlkChGw3k"></i><span data-page-node-id="HOG79G0vqUmVYfUfQgn39Q">学科竞赛</span></a>
+  <a href="#footer" data-sec="footer" data-page-node-id="pvvGPtpbfOjezD9YBm6FCh"><i data-page-node-id="nj2LD34GU4Xav3SNXvOaVh"></i><span data-page-node-id="8BS6uYEvpsXHsNMWFq1NS9">版权说明</span></a>
+</nav>
+
+<button class="to-top" id="toTop" aria-label="回到顶部" data-page-node-id="2VbNyRBKaUegfNJxzkXteU">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" data-page-node-id="nlxnwAdO87xpqpuF0JGO08">
+    <path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round" data-page-node-id="Jds2ukNPesKUUfUYfqu4JA"/>
+  </svg>
+</button>
+
+<!-- ============ 首页门户 ============ -->
+<section class="hero" id="portal" data-page-node-id="8OuzqyEIVAYU44ZfDl2PcI">
+  <div class="wrap hero-in" data-page-node-id="U6JvCQAG68iUBPgTrRNdiQ">
+    <div class="hero-copy" data-page-node-id="I7ZfPu19UkoJyP6qLmhzwk">
+      <p class="eyebrow" data-page-node-id="KcxNh5hJmrLG3uCUF0BkBo">Personal Knowledge Base · 智能传播方向</p>
+      <h1 data-page-node-id="6vfI33tmupNdkM8WZmMeqF">把散落的信息<br data-page-node-id="3xVF8hUn5GsUOUHwkRuAkE">养成可复用的<span class="hl" data-page-node-id="Hsvf6GdMgboRrj3xFxX7P1">知识</span>。</h1>
+      <p class="lede" data-page-node-id="kFRIwD1bi5bjZhDPywpdn9">
+        这是我在<b data-page-node-id="4YnypJPDk9k95rk09TgvoW">网络与新媒体（智能传播）</b>方向建立的一座小型知识库：12 篇主题笔记回答"算法如何重塑传播"，
+        6 类专题构成检索骨架，6 项学科竞赛指向实践出口。所有内容按
+        <b data-page-node-id="zsOqO4P9iV0G20ocTcxk26">采集 → 加工 → 连接 → 输出</b> 的方式组织，可搜索、可引用、可继续生长。
+      </p>
+
+      <div class="search search--lg" role="search" data-page-node-id="4fRFsCxQUU0h1DiHkkp6C3">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" data-page-node-id="OuU7Y62rSBPwedgVTmMTYp">
+          <circle cx="11" cy="11" r="6.5" data-page-node-id="YTy0TiPH6ry258GPyRiMpg"/><path d="M16 16l4.5 4.5" stroke-linecap="round" data-page-node-id="ooKF5x8KThXCB1gGUOuz7j"/>
+        </svg>
+        <input id="qHero" type="search" placeholder="搜索笔记、概念或赛事，如：信息茧房 / 数据新闻" autocomplete="off" aria-label="搜索知识库" data-page-node-id="BqEAY1Mw9sQwlBop11QiqH">
+        <kbd data-page-node-id="ONCBYCcjmTeZX0aPiDOpBF">/</kbd>
+        <button class="clear" id="clearHero" hidden data-page-node-id="8kgD4ogS7TBti7g3b8YOzC">清除</button>
+      </div>
+      <div class="search-hint" data-page-node-id="1UWPqMbTpJK09IKKaEEXoF">
+        <span data-page-node-id="W7pXrqd0gQbY011IL6vNel"><b data-page-node-id="WTwNUkpiFctWWLh3BZ9v4P">试试</b> 推荐算法</span>
+        <span data-page-node-id="DPXuYrFI3hYLnjGo3sK0AE"><b data-page-node-id="AkdpqiHUcEb3PjG4to2fzL">·</b> AIGC</span>
+        <span data-page-node-id="1ei71RfVGaEip6DHFEYEHp"><b data-page-node-id="iqn5p8DCNjQczm2m15jQge">·</b> 大广赛</span>
+        <span data-page-node-id="YbQZPMlPFESxnjAxoeFMhK"><b data-page-node-id="27MhPWmtfPlDKEPZultBKk">·</b> 舆情</span>
+      </div>
+
+      <div class="quick" data-page-node-id="hp5b9KSQpuPz2uR68fFE2V">
+        <a href="#cats" data-page-node-id="IURbbUSOte2509FVGaB9ah"><i data-page-node-id="GJ4M183WckWMTfHfqy7NDb">01</i> 浏览分类</a>
+        <a href="#notes" data-page-node-id="mOgwXsC8vtTjHuuD7Mvyfb"><i data-page-node-id="GQVJzGjrin2Kc3r82ACiAG">02</i> 读一篇笔记</a>
+        <a href="#comps" data-page-node-id="SsIkZDOkghPJXfsBSWWzTN"><i data-page-node-id="YMtgmYIc5nijbUkUEZ9HMW">03</i> 竞赛备赛</a>
+        <a href="#method" data-page-node-id="f8OspoypJBjr28Hb5xywUm"><i data-page-node-id="gsCY0Pi2aCFhD0zrE4OCaI">04</i> 搭建方法</a>
+      </div>
+    </div>
+
+    <aside class="hero-side" data-page-node-id="4E5fQbrK490BmCaUp7x6x4">
+      <div class="stats" data-page-node-id="XoXZCQn8sHbU5Z5aPtpb9z">
+        <div class="stat" data-page-node-id="DVdSIBXPXRsSHFqQoKrUNW"><b id="statNotes" data-page-node-id="Uam3HsWm2HXHTWKOFJxunP">12</b><span data-page-node-id="1rXYJG7kK036kMdNVZluyc">篇主题笔记</span></div>
+        <div class="stat" data-page-node-id="cXW8goCnzS3ZG8FHwP1sYd"><b data-page-node-id="CHVh7L1g9ZcQgYNxfP66UC">06</b><span data-page-node-id="mGSfUG7iFFY0QEiizE5NJ1">类知识专题</span></div>
+        <div class="stat" data-page-node-id="rDRrXWTeSTEAqUgUGjqD0U"><b data-page-node-id="JkHfy2fXWF3oNWltqsatNN">06</b><span data-page-node-id="3vmnIMCgSf9BnW4JbES42K">项学科竞赛</span></div>
+        <div class="stat" data-page-node-id="RaRmNZtSSoAhdgziJMfRiZ"><b data-page-node-id="3RK1CojyhhBvujYFjpROSo">11.02</b><span data-page-node-id="2jUhm0r1Q4BGvISmJCKbVL">最近更新</span></div>
+      </div>
+      <p class="side-title" data-page-node-id="C7h4a6aUslzeZYKDkpyL2i">最近更新</p>
+      <div class="recent" id="recentList" data-page-node-id="0d1Lnmz0eGSMDu77Dj6oc6"></div>
+      <div class="keywords" data-page-node-id="LoUvTHZDaOjxVIXaNySM2s">
+        <span data-page-node-id="3vPEiVZ66Fl7TStsArylGM">智能传播</span><span data-page-node-id="fh0ZEiXsyhS2XTzSk5BSEQ">推荐系统</span><span data-page-node-id="1mE6sp49OaRCgqMrslY1bA">生成式AI</span><span data-page-node-id="7fnW5mZ4W4hB8L2f1ssJI4">平台社会</span>
+        <span data-page-node-id="UklRV7GaYiWFSRIuXMOxAY">数据新闻</span><span data-page-node-id="Z7iA1DSmbH2QUiI43ItE4R">舆情分析</span><span data-page-node-id="1yYwHVzNi2cIPfO8BE2B8F">算法治理</span><span data-page-node-id="RIZ7lJIEAASjtEcVAOgvWb">AIGC 伦理</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ 搭建方法 ============ -->
+<section class="sec" id="method" data-page-node-id="6s9u8SbKGVrXTqiH10oVPD">
+  <div class="wrap" data-page-node-id="OsRPCEyXrm3x21uYijvBsS">
+    <div class="sec-head reveal" data-page-node-id="LghgL6wHUDai6x646DzMVH">
+      <span class="sec-no" data-page-node-id="v1sq2CxJWHRmay5nb1XNDJ">01</span>
+      <div data-page-node-id="E5soWoIHfrP7Lpw7zUrDDy">
+        <h2 data-page-node-id="lYIsYAvMRy0gtiCzndmn5Q">搭建方法<em data-page-node-id="RoXoLSQoytFLif7uusk40R">Workflow</em></h2>
+      </div>
+      <p class="sec-desc" data-page-node-id="NY0HQtMOaPd4L0nFB141XB">知识库的价值不在于"存了多少"，而在于"下一次做作业、写策划、备赛时，能不能三分钟内找到并直接使用"。</p>
+    </div>
+
+    <div class="steps reveal" data-page-node-id="cq3fBZdFL4Aq6YFcO8dkQ2">
+      <div class="step" data-page-node-id="qLWYFrPPTBNskCf3A1M9s0">
+        <span class="n" data-page-node-id="2gQQLNaUi43mBNfCTeGZoz">STEP 01</span>
+        <h3 data-page-node-id="UnZcMHpdBRAQZ58fpfMijZ">采集</h3>
+        <span class="en" data-page-node-id="vrjb7yWcnbkjNauyAoGh9g">Capture</span>
+        <p data-page-node-id="pI6yL2zbcrhnLlnt148bQf">只收"与当前问题相关"的材料。统一入口与命名：日期-主题-关键词，避免收藏夹变成垃圾场。</p>
+        <span class="tagline" data-page-node-id="34qhHT3mWXCknY82avY69u">一个入口，一条命名规则</span>
+      </div>
+      <div class="step" data-page-node-id="J01ADU91H2RPLnvAN3fEoJ">
+        <span class="n" data-page-node-id="MfyG9UIx4i0Q5ZF5ijtMQ9">STEP 02</span>
+        <h3 data-page-node-id="qlKIRV44M0LTFlSlNHn4By">加工</h3>
+        <span class="en" data-page-node-id="qJ2GXElJIb45iL8DOTegak">Process</span>
+        <p data-page-node-id="6DSwZG8CUTv2DPj65Y8za3">用自己的话写三行摘要：它说了什么、我信哪一部分、我能用在哪里。不转述等于没读。</p>
+        <span class="tagline" data-page-node-id="sTpu1Cy4e11xZiatqZ9sLw">三行摘要法</span>
+      </div>
+      <div class="step" data-page-node-id="0wUZzTdA1uSlefm9oC2meT">
+        <span class="n" data-page-node-id="TqsSzy0tEqViIa9PRv4Wa1">STEP 03</span>
+        <h3 data-page-node-id="oyHlGxNSYawiX3xdM5RjBJ">连接</h3>
+        <span class="en" data-page-node-id="JtOyzLE7FeZKmszYbNrFEj">Connect</span>
+        <p data-page-node-id="mg65eZT8tUkaTIhQaALrCH">每篇至少挂两条链接：一个概念、一种方法、或一个反例。孤立的笔记无法产生复利。</p>
+        <span class="tagline" data-page-node-id="HeX0aI18LLppJd1eh3rETj">双向链接 ≥ 2</span>
+      </div>
+      <div class="step" data-page-node-id="IUCTS7yCbNQViAotv77Lrn">
+        <span class="n" data-page-node-id="TyFFGw5lEB8QT0TCENLoEo">STEP 04</span>
+        <h3 data-page-node-id="AJo7fHQhyk9hJenE05JpOB">输出</h3>
+        <span class="en" data-page-node-id="CGtZJcxrKcEeFs58u840Oq">Output</span>
+        <p data-page-node-id="DkWUAmRiZ0tlKxlZFKD5im">以可交付物倒逼整理：一条推文、一页策划、一个可视化作品。输出会暴露结构的漏洞。</p>
+        <span class="tagline" data-page-node-id="qHVwq7ntXbPSYqfxWFgIx6">以交付定结构</span>
+      </div>
+    </div>
+
+    <div class="principles reveal" data-page-node-id="GirqKUHbmIYLwnUiGOh5bd">
+      <b data-page-node-id="vBpOCCXsAyhPUNWxcrOAit">三条原则</b>
+      <span data-page-node-id="6g7fC9znbWRyva6WBHnawI">原子化：一篇只讲一件事</span>
+      <span data-page-node-id="dNonf5ygz7SHqjPXXojXbB">可检索：标题即问题</span>
+      <span data-page-node-id="ZPHB6lT1SxkURYi0fFI91D">可复用：结论必须能搬走</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 知识分类 ============ -->
+<section class="sec" id="cats" data-page-node-id="wXVy6afNQYpMsnd7gZyzzt">
+  <div class="wrap" data-page-node-id="Rqecia4nIE5jIlgwtE52iH">
+    <div class="sec-head reveal" data-page-node-id="Cx6HDIBj3u9UK4KXK872Xj">
+      <span class="sec-no" data-page-node-id="D7StvWeI4eHMRu1LE18d75">02</span>
+      <div data-page-node-id="YRR2PY7Eqy708BN2XGiQmD">
+        <h2 data-page-node-id="ZlCI8iazFulW4Bq20Bvb6q">知识分类<em data-page-node-id="WVuTIL9eHA5I5ZY8I5FXuv">Categories</em></h2>
+      </div>
+      <p class="sec-desc" data-page-node-id="ylnBb2xGi3tUTswhZreaei">六个专题覆盖本科阶段的主干知识：从经典效果理论，到算法机制、生产技术、数据方法与合规边界。</p>
+    </div>
+    <div class="cats reveal" id="catGrid" data-page-node-id="KYs2BaF3lspwvlPO7ICnpz"></div>
+  </div>
+</section>
+
+<!-- ============ 笔记与详情 ============ -->
+<section class="sec" id="notes" data-page-node-id="hGoRDJwKNeQCp4IYmbLBjQ">
+  <div class="wrap" data-page-node-id="pBRpVBUCJFcXWsGVReUrsm">
+    <div class="sec-head reveal" data-page-node-id="PDFzGUAhFY6oHj6G52AuJl">
+      <span class="sec-no" data-page-node-id="kZvEmCT8bWTjs4OR5F55fj">03</span>
+      <div data-page-node-id="B8uCP89vovmKJWCkwRUQCt">
+        <h2 data-page-node-id="QgeYW9QC2VQWOrYtOEhNAP">笔记与详情<em data-page-node-id="OMVZz7MZzDT4pmwnoH2q3V">Notes &amp; Reader</em></h2>
+      </div>
+      <p class="sec-desc" data-page-node-id="kjovR7ovTWKftdqmObggJX">左侧列表、右侧阅读。点击任意笔记即可在右侧展开全文，搜索会实时过滤并高亮命中的关键词。</p>
+    </div>
+
+    <div class="notes-toolbar reveal" data-page-node-id="s58g4cywfySW9fYXLndv9T">
+      <div class="chips" id="chips" data-page-node-id="WESsH6ygn2L0BQ8tgICAnw"></div>
+      <div class="toolbar-right" data-page-node-id="lhpSyXzEUyiUUKquWnjrCP">
+        <span class="note-count" id="noteCount" data-page-node-id="OhsqGQfB9C3rUOtJa1uCsG">共 12 篇</span>
+        <div class="search search--sm" role="search" data-page-node-id="UxW32JIwfDr7ZqutxbkMvY">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" data-page-node-id="sfYUCa1sk3Ly2ZzldvBkcU">
+            <circle cx="11" cy="11" r="6.5" data-page-node-id="2WPfquloMZMeFZ2bynY10s"/><path d="M16 16l4.5 4.5" stroke-linecap="round" data-page-node-id="QXVHKz6k9qXWOtV7Bx9ZDE"/>
+          </svg>
+          <input id="qNotes" type="search" placeholder="在笔记中搜索" autocomplete="off" aria-label="在笔记中搜索" data-page-node-id="vtsnwyydTUPz6hrEbw8bNv">
+        </div>
+      </div>
+    </div>
+
+    <div class="notes-grid reveal" data-page-node-id="lOQDHMLVtwdXsNTublK5HT">
+      <div class="note-list" id="noteList" data-page-node-id="en8gbdshYJH3fdyCLJgqCI"></div>
+      <div class="reader-wrap" data-page-node-id="dTsEZ670GEqIlGSYzMZhxQ">
+        <article class="reader" id="reader" data-page-node-id="C6hBWF1MWndxvPzRDyGKC7"></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 竞赛 ============ -->
+<section class="sec" id="comps" data-page-node-id="YoTKvaa9u2qoGu4TMwMgUI">
+  <div class="wrap" data-page-node-id="5Yhx4hAiFHTLjf2BbSpdL5">
+    <div class="sec-head reveal" data-page-node-id="dSJQALYlv8qAizFf9luEng">
+      <span class="sec-no" data-page-node-id="CH704jDE65VoQVvBcx73O1">04</span>
+      <div data-page-node-id="F3GepxwijpIcxbX8sWFsnP">
+        <h2 data-page-node-id="fVJMmfXlj9TRFD852Pljnd">学科竞赛<em data-page-node-id="BAho208Hy2OUvguhR0eSDa">Competitions</em></h2>
+      </div>
+      <p class="sec-desc" data-page-node-id="9fTkhNLzehfCInB8ZTQp0k">把知识库里的方法搬到真实命题上。悬停卡片可查看备赛要点；赛程与赛道以各赛事官网当年通知为准。</p>
+    </div>
+    <div class="comps reveal" id="compGrid" data-page-node-id="FaJXmAs3gDAaDxe4SHUFN7"></div>
+    <p class="comp-note" data-page-node-id="6L77LdHm2hNlfoBIltDoC4">* 以上时间与赛道为常规安排，仅作规划参考。</p>
+  </div>
+</section>
+
+<!-- ============ 页脚 ============ -->
+<footer class="footer" id="footer" data-page-node-id="OOpY1f0HgscMb2SqKRg7Fn">
+  <div class="wrap" data-page-node-id="dXNRYp9lS201fLwlFvbEwZ">
+    <div class="foot-grid" data-page-node-id="BWrVflnMyjvDL8pBxCDx15">
+      <div data-page-node-id="bRGRLwTV6UyNqsCt0VuXbU">
+        <div class="foot-brand" data-page-node-id="Lj5LuZBF0SPwyID9kcWuQo">
+          <span class="brand-mark" data-page-node-id="xJ6cRGS3KO2LyhwMMoZpTM"></span>
+          <b data-page-node-id="H8vEFUMChRPuwNTtv8NvHg">薛彤的知识库</b>
+        </div>
+        <p class="foot-about" data-page-node-id="8JIsdAKy6aRfEwhFwNnl2e">
+          一个关于<b data-page-node-id="SujQScRxf2FiBmmM9AYzUY">网络与新媒体（智能传播）</b>的个人学习站点。内容来自课程笔记、论文阅读与竞赛实践，
+          以"结构化、可检索、可复用"为原则持续整理。<br data-page-node-id="fMTxABg4zHMlKvgqfZud7m">
+          本站为纯静态页面，无外部依赖，可离线打开与长期归档。
+        </p>
+      </div>
+
+      <div class="foot-col" data-page-node-id="is9UpxycgTEGLUeqktpfBW">
+        <h4 data-page-node-id="f2zbeU7DhFYAcSsnrHU8jN">内容目录</h4>
+        <div class="foot-links" data-page-node-id="Q1vNkdGbB9rvqYpHSu1BTw">
+          <a href="#portal" data-page-node-id="8SH6PgkKHJ5ScxOCTb3qrZ">首页门户</a>
+          <a href="#method" data-page-node-id="ryJ8De2KIjnPaIvxv5oI2J">搭建方法</a>
+          <a href="#cats" data-page-node-id="DFAx1rCMnZDh3K08tUhSSP">知识分类</a>
+          <a href="#notes" data-page-node-id="xVBdVV6caeoOiwnmbQE0xE">笔记详情</a>
+          <a href="#comps" data-page-node-id="Z9YYMgoo6XiXU7rJgqVvit">学科竞赛</a>
+        </div>
+      </div>
+
+      <div class="foot-col" data-page-node-id="mD3xNHJpmlIxauOnsLmIBw">
+        <h4 data-page-node-id="fxfPtSwDRmCT40s5fqufAy">更新说明</h4>
+        <ol class="changelog" data-page-node-id="ipwBzbEJ2XIXMZvaWJRPWY">
+          <li data-page-node-id="YiwURBMhwDcKverAJRvqqd"><span class="ver" data-page-node-id="RIbzOOcak8U7J6pwekoLjl">v1.2</span><span class="date" data-page-node-id="LCKlhodjOg2AczinxJqGcw">2026-11-02</span><p data-page-node-id="dPegbaL1Yid54K0dAz7bOU">新增「学科竞赛」模块与 6 张赛事卡片；搜索支持正文匹配与关键词高亮。</p></li>
+          <li data-page-node-id="hUOpsOSTL87B249SeI2hr6"><span class="ver" data-page-node-id="unIFxQ1wRcmRmymdoyk48q">v1.1</span><span class="date" data-page-node-id="KcZehF663Z4W63laSGjpFh">2026-10-20</span><p data-page-node-id="uAtZnKHWGeXVJ0sRZE4WHY">补充智能传播与算法治理 4 篇笔记；加入右侧悬浮导航与滚动进度。</p></li>
+          <li data-page-node-id="mYuCP5kCUtUO1UulPUbml8"><span class="ver" data-page-node-id="QqOPX22KXcyZGgB6sONkd6">v1.0</span><span class="date" data-page-node-id="ATLFbGGKjAGCV0poQjlrva">2026-09-28</span><p data-page-node-id="CATimB0YgHzoLD51AEaSmS">站点建立：确定六类专题结构、门户布局与笔记阅读器。</p></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="foot-bottom" data-page-node-id="Y0mY6OOapq0w5KUS9hzpEs">
+      <div class="l" data-page-node-id="xQlZOK2gROOajSYAh8CNpG">
+        <span data-page-node-id="lm4sDISRfqf15Vx6tMzQlH">© 2026 <em data-page-node-id="NoSsrePkk4oNGYMigUKBqe">薛彤的知识库</em> · 保留所有权利</span>
+        <span data-page-node-id="Nt719hYZlbAqfVDjK59MQT">内容仅供学习交流，转载请注明来源</span>
+      </div>
+      <div class="l" data-page-node-id="aZZDQAQBYdGZCYVsLQU8gQ">
+        <span data-page-node-id="XSKBfVKbrD9dsSvTOTTanV">最近更新：<em data-page-node-id="xJm2lR8iFqUtPpgaA0e3zm">2026-11-02</em></span>
+        <a href="#portal" data-page-node-id="uXTKAdEkq4w9xgAEpXm5QY">回到顶部 ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" data-page-node-id="FGLxujle66Krg8W1O1RXMg">已复制</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var $ = function(s,r){ return (r||document).querySelector(s); };
+  var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); };
+
+  /* ---------------- 数据：分类 ---------------- */
+  var ICONS = {
+    theory:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v18H6.5A2.5 2.5 0 0 1 4 18.5z"/><path d="M4 17.5H19"/><path d="M9 7.5h6"/></svg>',
+    algo:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="9" r="2.4"/><circle cx="9" cy="18" r="2.4"/><circle cx="19" cy="18" r="2.4"/><path d="M8.2 7.2l7.6 1.4M7 8.3l1.3 7.4M11.4 18h5.2M16.6 11.1l1.6 4.5"/></svg>',
+    tech:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 8.5L4.5 12l4 3.5M15.5 8.5l4 3.5-4 3.5M13.5 5l-3 14"/></svg>',
+    content:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4.2-1L19 8.2 15.8 5 5 15.8z"/><path d="M13.8 7l3.2 3.2"/><path d="M4 20l1-4.2"/></svg>',
+    data:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M8 20v-6M12.7 20V9M17.4 20v-8.5"/></svg>',
+    ethics:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.8v5.6c0 4.3-2.9 7.3-7 9-4.1-1.7-7-4.7-7-9V5.8z"/><path d="M9.2 11.8l2 2 3.6-4"/></svg>'
+  };
+
+  var CATS = [
+    { key:'theory', name:'传播学基础理论', en:'Theory', icon:'theory',
+      desc:'效果研究、媒介理论、平台社会与受众观的演变，构成分析一切新媒体现象的底座。' },
+    { key:'algo', name:'智能传播与算法', en:'Algorithm', icon:'algo',
+      desc:'推荐系统如何工作、如何影响可见性，以及"信息茧房""算法驯化"等争论的证据边界。' },
+    { key:'tech', name:'数字媒体技术', en:'Technology', icon:'tech',
+      desc:'生成式模型、提示工程、前端与数据工具，技术决定了内容形态与生产效率的上限。' },
+    { key:'content', name:'内容生产与运营', en:'Content', icon:'content',
+      desc:'选题、脚本、剪辑、分发与复盘的完整链路，把创意变成可复用、可度量的方法。' },
+    { key:'data', name:'数据分析与用户研究', en:'Data', icon:'data',
+      desc:'舆情研判、用户画像、指标体系与可视化叙事，用数据支撑判断而非装点报告。' },
+    { key:'ethics', name:'媒介伦理与法规', en:'Ethics', icon:'ethics',
+      desc:'深度伪造、算法备案、个人信息保护与未成年人保护，合规是产品的第一性约束。' }
+  ];
+
+  /* ---------------- 数据：笔记 ---------------- */
+  var NOTES = [
+    {
+      id:'n01', cat:'theory', date:'2026-10-28', read:'8 min', no:'01',
+      title:'传播效果研究的四次转向：从魔弹到算法',
+      summary:'把魔弹论、有限效果、认知建构与算法效果串成一条线，理解"媒介对人做了什么"如何变成"人与媒介如何互构"。',
+      tags:['效果研究','范式','文献综述'],
+      body:'<p>传播效果研究的起点是 20 世纪初的"魔弹论"（又称皮下注射论）。它假设媒介信息如子弹般直接命中受众，产生立竿见影的态度与行为改变。这一假设与当时的宣传研究、电影影响研究以及行为主义心理学密切相关，也隐含着一个被动、同质的"大众"形象。</p>'+
+      '<p>1940 年拉扎斯菲尔德的伊里县调查改变了这一图景：人们在投票决策中更多受到家人、朋友与意见领袖的影响，媒介的作用被社会关系"中介"了。此后克拉珀在《大众传播的效果》中把结论概括为"强化而非改变"，效果研究进入"有限效果"阶段。</p>'+
+      '<h4>从短期态度到长期认知</h4>'+
+      '<p>1970 年代之后，议程设置、沉默的螺旋、涵化理论与框架理论陆续登场，关注点从"一次传播能否改变态度"转向"长期接触如何建构认知地图"。使用与满足研究则把受众从被动接受者变成有需求、会选择的行动者。</p>'+
+      '<ul><li>线性注射：媒介强、受众弱，效果直接且短期。</li>'+
+      '<li>社会关系中介：两级传播、意见领袖、选择性接触。</li>'+
+      '<li>认知建构：议程、框架、涵化，效果是长期的、累积的。</li>'+
+      '<li>算法中介：分发权交给系统，效果嵌入个性化排序之中。</li></ul>'+
+      '<blockquote>效果研究的历史，某种意义上是一部"受众"被不断重新定义的历史。<span>—— 阅读笔记</span></blockquote>'+
+      '<div class="callout"><b>提醒</b><span>写课程论文时，务必把"效果"拆成认知、态度、行为三个层次分别讨论。很多看似矛盾的实证结论，其实测量的是不同层次。</span></div>'
+    },
+    {
+      id:'n02', cat:'theory', date:'2026-10-22', read:'7 min', no:'02',
+      title:'平台社会：当分发被基础设施接管',
+      summary:'平台不只是渠道，而是同时承担连接、分发、支付、身份与治理的基础设施。理解"平台化"的三重机制。',
+      tags:['平台化','基础设施','媒介逻辑'],
+      body:'<p>把平台理解为"发布渠道"已经不够了。当社交、支付、出行、政务都运行在同一批应用之上，平台事实上成为社会运转的基础设施：它定义接口、制定规则、分配可见性，并掌握行为数据。</p>'+
+      '<h4>平台化的三重机制</h4>'+
+      '<ul><li><b>数据化</b>：把行为转写为可计算的数据，使"注意力"成为可交易的计量单位。</li>'+
+      '<li><b>商品化</b>：通过广告、抽成、订阅把连接关系变现，形成双边市场结构。</li>'+
+      '<li><b>选择性</b>：以推荐、榜单、审核决定什么被看见，编辑权由人转移到规则与模型。</li></ul>'+
+      '<p>对内容创作者而言，理解"选择性"就是理解流量。平台的推荐权重、话题标签、完播门槛共同构成一套隐性的写作规范——你以为在自由表达，实际上在与一套评分函数协商。</p>'+
+      '<blockquote>当分发被平台接管，创作就不再只是表达，而是与规则协商的过程。<span>—— 课程讨论</span></blockquote>'+
+      '<div class="callout"><b>框架</b><span>分析任何一个平台现象，可以沿"行动者—界面—数据—规则"四层展开，比空谈"资本"或"技术"更能落到具体证据。</span></div>'
+    },
+    {
+      id:'n03', cat:'algo', date:'2026-11-02', read:'9 min', no:'03',
+      title:'推荐系统的四层机制：召回、粗排、精排、重排',
+      summary:'从百万级候选到最终十几个卡片，中间发生了什么？用工程视角拆解"算法推荐"，比"算法很神奇"更接近真相。',
+      tags:['推荐系统','多目标排序','冷启动'],
+      body:'<p>推荐系统的经典结构是四层漏斗。<b>召回</b>从百万级内容中取出千级候选，常用协同过滤、向量召回（双塔）、热门与地理召回；<b>粗排</b>用轻量模型把候选压到百级；<b>精排</b>用深度模型预测点击率、转化率、停留时长等多个目标；<b>重排</b>再处理多样性、去重、时效与业务规则。</p>'+
+      '<h4>三个关键概念</h4>'+
+      '<ul><li><b>协同过滤</b>：UserCF 找相似的人，ItemCF 找相似的物，本质是"用群体行为补全个体偏好"。</li>'+
+      '<li><b>多目标融合</b>：把 CTR、CVR、时长、负反馈加权成一个分数，"用户价值"被工程化为可优化的代理指标。</li>'+
+      '<li><b>冷启动</b>：新内容靠内容特征与探索流量获得初始曝光，这也是新账号必须"前几条就抓人"的结构性原因。</li></ul>'+
+      '<p>评估上，离线看 AUC、NDCG、召回率，线上看人均时长、留存与生态指标（内容覆盖率、创作者收益分布）。只看点击率会迅速导向标题党与低质内容，因此负反馈与多样性约束是必备的刹车。</p>'+
+      '<div class="callout"><b>方法</b><span>写智能传播的作业时，把四层漏斗画成图，再标出每一层可能产生的偏差（曝光偏差、位置偏差、反馈循环），论证立刻具体。</span></div>'
+    },
+    {
+      id:'n04', cat:'algo', date:'2026-10-30', read:'8 min', no:'04',
+      title:'"信息茧房"：证据、争议与更稳妥的表述',
+      summary:'算法究竟是否把人关进茧房？现有实证结论并不一致。梳理测量方式，才能避免把复杂问题归因于单一技术。',
+      tags:['信息茧房','回音室','选择性暴露'],
+      body:'<p>桑斯坦提出"信息茧房"时，讨论的核心是个人选择与"我的日报"式的信息定制，而非今天的推荐算法。后来这一概念被大量用于批评算法，语义逐渐泛化，也带来归因上的风险。</p>'+
+      '<h4>实证结论为何不一致</h4>'+
+      '<p>一部分研究发现推荐会提高内容集中度、加剧同质化；另一部分研究基于跨站浏览数据，发现平台使用反而增加了异质新闻的接触。差异往往来自三点：测量的是曝光还是点击、样本是否覆盖多平台、以及"异质"如何界定。</p>'+
+      '<ul><li>内容多样性：可用信息熵、类目分布衡量。</li>'+
+      '<li>网络同质性：可用 EI 指数衡量社交关系中的跨群体连接。</li>'+
+      '<li>态度极化：需要前后测，且要区分"立场变极端"与"立场变清晰"。</li></ul>'+
+      '<blockquote>把复杂的社会技术问题归因于单一算法，是另一种简化。<span>—— 文献综述</span></blockquote>'+
+      '<div class="callout"><b>表述建议</b><span>更稳妥的说法是：算法是"放大器"而非唯一原因，它与选择性暴露、社交网络同质性、平台激励共同作用，且效应大小依情境而定。</span></div>'
+    },
+    {
+      id:'n05', cat:'tech', date:'2026-10-26', read:'7 min', no:'05',
+      title:'生成式 AI 与内容生产的三类人机协同',
+      summary:'辅助型、协作型、自主型——三种协同模式对应不同的质量控制方式，也对应不同的署名与责任问题。',
+      tags:['AIGC','人机协同','生产流程'],
+      body:'<p>生成式模型进入内容生产后，最容易出现的误区是把它当成"更快的手"。实际上被重构的是整个流程：选题、资料、脚本、素材、成片、分发，每一环都可以插入模型能力，但判断与责任仍然在人。</p>'+
+      '<h4>三种协同模式</h4>'+
+      '<ul><li><b>辅助型</b>：AI 起草、人修改。效率提升明显，适合资讯改写、通稿、字幕。</li>'+
+      '<li><b>协作型</b>：人机交替迭代，人给方向与约束，AI 给变体。适合创意发散与分镜。</li>'+
+      '<li><b>自主型</b>：人设定目标与验收标准，AI 完成整段工作。风险最高，必须有审核环节。</li></ul>'+
+      '<p>质量控制的三个抓手：<b>事实核验</b>（模型会生成看似合理的信息）、<b>风格一致性</b>（用风格样例与禁用词约束）、<b>版权与肖像合规</b>（训练来源、素材授权、AI 标识）。</p>'+
+      '<blockquote>记录每一次提示词与输出差异，本身就是最好的方法论笔记。<span>—— 实践记录</span></blockquote>'+
+      '<div class="callout"><b>提醒</b><span>课程作业中使用 AIGC，建议在文末附"工具—用途—人工修改比例"说明。既是学术诚信，也是能力证明。</span></div>'
+    },
+    {
+      id:'n06', cat:'tech', date:'2026-10-18', read:'6 min', no:'06',
+      title:'提示词工程：角色、任务、约束、示例',
+      summary:'结构化提示的四要素，以及思维链、少样本、结构化输出三个进阶技巧与常见失效原因。',
+      tags:['Prompt','结构化输出','评估'],
+      body:'<p>把提示词理解为"咒语"是误解，它更像一份需求文档：把隐含的验收标准显性化。一个稳定的结构化提示通常包含四部分。</p>'+
+      '<h4>四要素</h4>'+
+      '<ul><li><b>角色</b>：限定知识域与语气，例如"你是一名科技媒体的资深编辑"。</li>'+
+      '<li><b>任务</b>：动词明确、对象具体，"为一条 60 秒短视频写口播稿"优于"帮我写点东西"。</li>'+
+      '<li><b>约束</b>：字数、结构、禁用词、事实边界（未知则说明未知）。</li>'+
+      '<li><b>示例</b>：给出 1—3 个理想样例，比形容词更能传递风格。</li></ul>'+
+      '<p>进阶技巧包括思维链（要求分步推理，适合结构与逻辑任务）、少样本（Few-shot，适合格式与风格迁移）、结构化输出（JSON 或表格，便于后续处理）。</p>'+
+      '<p>常见失效原因：多条指令互相冲突、缺少边界导致编造、一次要求完成过多任务、没有规定输出格式导致无法复用。</p>'+
+      '<div class="callout"><b>实践</b><span>同一任务准备 A/B 两版提示，各跑 5 次，记录稳定性与幻觉率。这个对比表本身就是一份可交付的课程作业。</span></div>'
+    },
+    {
+      id:'n07', cat:'content', date:'2026-10-24', read:'7 min', no:'07',
+      title:'短视频叙事：黄金三秒与完播率的真实逻辑',
+      summary:'完播率不是靠拖时长，而是信息密度与期待管理的乘积。用分镜脚本表控制节奏。',
+      tags:['短视频','叙事结构','完播率'],
+      body:'<p>平台的第一道筛选发生在 1—3 秒。所谓"黄金三秒"，本质是在极短时间内回答观众一个问题：这与我有关吗？常见的三种前置方式是冲突前置、结果前置、身份前置。</p>'+
+      '<h4>四段结构</h4>'+
+      '<ul><li><b>钩子</b>：制造信息缺口，让人想看下去。</li>'+
+      '<li><b>情境</b>：用 2—3 个镜头交代背景，避免铺垫过长。</li>'+
+      '<li><b>转折</b>：给出反常识或情绪峰值，是转发的触发点。</li>'+
+      '<li><b>落点</b>：一句可被引用的结论，或一个明确的互动邀请。</li></ul>'+
+      '<p>节奏的基本单位是 2—3 秒一个信息点，画面与声音至少要有一个在变化。完播率优化的正确方向是提高单位时间的信息密度、管理期待（预告什么就给什么），而不是靠无意义的延时。</p>'+
+      '<blockquote>复盘时把"流失点"标在时间轴上，比只看总量数据有用得多。<span>—— 运营复盘</span></blockquote>'+
+      '<div class="callout"><b>工具</b><span>分镜脚本表至少包含：时间、画面、台词、字幕、音效、目的。写完再拍，废片率会明显下降。</span></div>'
+    },
+    {
+      id:'n08', cat:'content', date:'2026-10-12', read:'6 min', no:'08',
+      title:'内容运营闭环：选题、生产、分发、复盘',
+      summary:'把"灵感驱动"改成"流程驱动"：选题四象限、生产 SOP、平台适配与一次只改一个变量的复盘法。',
+      tags:['内容运营','选题','SOP'],
+      body:'<p>稳定的内容产出依赖闭环，而不是灵感。闭环的四个环节是：选题、生产、分发、复盘，每一环都要留下可复用的中间产物（选题表、脚本模板、渠道清单、复盘表）。</p>'+
+      '<h4>选题四象限</h4>'+
+      '<p>以"用户需求强度"与"内容供给密度"为两轴：高需求低供给是最优区，适合长期投入；高需求高供给需要差异化视角；低需求高供给应直接放弃；低需求低供给只做实验。追热点时额外评估一件事：与账号定位的相关性。不相关的爆款会污染账号标签。</p>'+
+      '<h4>复盘三问</h4>'+
+      '<ul><li>哪一条数据异常？（对比自身均值，而非绝对值）</li>'+
+      '<li>异常最可能来自哪一环？封面、前 3 秒、结构，还是分发时段？</li>'+
+      '<li>下一期只改哪一个变量？</li></ul>'+
+      '<div class="callout"><b>原则</b><span>一次只改一个变量，否则你无法归因。这条原则能省下大量"感觉有效"的无效努力。</span></div>'
+    },
+    {
+      id:'n09', cat:'data', date:'2026-10-31', read:'8 min', no:'09',
+      title:'网络舆情的生命周期与情感分析',
+      summary:'潜伏、爆发、蔓延、消退——每个阶段的处置重点不同。附情感分析的方法选择与四个研判维度。',
+      tags:['舆情','情感分析','社会网络'],
+      body:'<p>网络舆情通常呈现四阶段曲线：<b>潜伏期</b>（信息零散、情绪积累）、<b>爆发期</b>（关键节点触发，量级跃升）、<b>蔓延期</b>（议题扩散、框架竞争）、<b>消退期</b>（注意力转移或问题解决）。</p>'+
+      '<p>各阶段的重点不同：潜伏期做监测与预警，爆发期做事实澄清与首因回应，蔓延期做议题引导与多方沟通，消退期做修复与制度化改进。错位回应（例如在爆发期讲道理、在消退期才道歉）是常见的二次危机来源。</p>'+
+      '<h4>情感分析的三种路径</h4>'+
+      '<ul><li>词典法：可解释、易实现，但对新词与反讽无能为力。</li>'+
+      '<li>机器学习：需要标注语料，领域迁移成本高。</li>'+
+      '<li>预训练模型：效果较好，注意中文口语、缩写与多模态（图文/视频）场景。</li></ul>'+
+      '<p>研判建议看四个维度：热度（声量增速而非总量）、情感倾向（正负中性占比与强度）、关键节点（媒体与 KOL 的介入时点）、议题框架（讨论被如何定义）。</p>'+
+      '<div class="callout"><b>工具链</b><span>采集 → 分词 → 情感打分 → 传播网络可视化。一张网络图往往比十页文字更能说明"谁在放大这件事"。</span></div>'
+    },
+    {
+      id:'n10', cat:'data', date:'2026-10-08', read:'6 min', no:'10',
+      title:'用户画像与分层：从标签到可执行的动作',
+      summary:'画像不是标签堆砌。分层方法（RFM、AARRR、活跃度分箱）的选择，取决于你要做的那个动作。',
+      tags:['用户画像','RFM','AARRR'],
+      body:'<p>一个可用的画像体系通常包含五类标签：人口属性、行为路径、内容偏好、消费能力、生命周期阶段。标签的价值不在于多，而在于能否稳定更新、能否落到具体动作。</p>'+
+      '<h4>三种常用分层</h4>'+
+      '<ul><li><b>RFM</b>：最近一次消费、频次、金额。适合交易型产品，分出高价值、沉睡、挽回人群。</li>'+
+      '<li><b>AARRR</b>：获客、激活、留存、收入、推荐。适合看漏斗与找瓶颈。</li>'+
+      '<li><b>活跃度分箱</b>：按近 7/30 日行为分层，适合内容型产品的推送策略。</li></ul>'+
+      '<p>从画像到策略的关键一步是"每层对应一个动作"：高价值用户做权益与共创，新用户做引导与首内容，沉睡用户做召回与理由，流失预警用户做干预。没有动作的画像只是装饰。</p>'+
+      '<div class="callout"><b>反例</b><span>"18—24 岁女性、喜欢美妆"不是画像，是标签。真正的画像要能回答：她在什么场景下、因为什么理由、选择了谁。</span></div>'
+    },
+    {
+      id:'n11', cat:'ethics', date:'2026-11-02', read:'7 min', no:'11',
+      title:'深度伪造与算法治理：内容团队的合规清单',
+      summary:'标识、授权、核验、留痕。梳理深度合成与生成式 AI 相关的规范要求，以及团队可执行的四步自查。',
+      tags:['深度伪造','生成式AI','合规'],
+      body:'<p>深度伪造带来三类风险：虚假信息（伪造发言人、伪造现场）、人格权侵害（换脸、仿声用于商业宣传）、证据体系受损（"有图有真相"失效，真实影像也可能被指为伪造）。</p>'+
+      '<h4>规范框架</h4>'+
+      '<p>国内相关要求大致沿三条线索展开：<b>深度合成规定</b>要求对生成内容进行显著标识、不得删除或篡改标识；<b>生成式人工智能服务管理暂行办法</b>要求训练数据合法、内容安全、对生成内容进行标识；<b>个人信息保护法</b>对生物识别信息按敏感个人信息从严处理，处理需单独同意。</p>'+
+      '<ul><li>素材：人脸、声音、肖像必须有明确授权，注明用途与期限。</li>'+
+      '<li>标识：显式标识（画面/音频提示）+ 隐式标识（元数据水印）。</li>'+
+      '<li>核验：涉及公共事务的内容，须交叉信源，不以单一视频为证。</li>'+
+      '<li>留痕：保存提示词、原始素材与修改记录，便于事后追溯。</li></ul>'+
+      '<blockquote>合规不是上线前的最后一道关卡，而是设计阶段的第一性约束。<span>—— 课程笔记</span></blockquote>'
+    },
+    {
+      id:'n12', cat:'ethics', date:'2026-10-15', read:'6 min', no:'12',
+      title:'算法推荐的法律边界：告知、选择与申诉',
+      summary:'个性化推荐不是"技术中立"的免责区：告知义务、关闭选项、非个性化选项、自动化决策的说明与拒绝权。',
+      tags:['算法备案','自动化决策','未成年人保护'],
+      body:'<p>算法推荐涉及三组规范要求。第一是<b>算法推荐管理规定</b>：应当以适当方式告知用户算法推荐情况，提供关闭算法推荐服务的选项，提供非个性化推荐，并对未成年人、老年人等群体提供便利。</p>'+
+      '<p>第二是<b>个人信息保护法</b>第 24 条：利用个人信息进行自动化决策，应当保证决策的透明度和结果公平公正，不得对个人在交易价格等交易条件上实行不合理的差别待遇；通过自动化决策方式作出对个人权益有重大影响的决定，个人有权要求说明，并有权拒绝仅通过自动化决策的方式作出决定。</p>'+
+      '<p>第三是<b>未成年人保护</b>相关要求：防沉迷、模式切换、内容分级与时段管理。平台侧还需履行算法备案、安全评估与定期审计义务。</p>'+
+      '<h4>四个合规检查点</h4>'+
+      '<ul><li>告知：用户能否在三次点击内找到"为什么推荐给我"。</li>'+
+      '<li>选择：关闭入口是否与开启同样容易。</li>'+
+      '<li>留痕：算法版本、参数调整、评估报告是否可追溯。</li>'+
+      '<li>申诉：是否存在有效的人工复核与救济渠道。</li></ul>'+
+      '<div class="callout"><b>讨论题</b><span>"透明度"应透明到何种程度？公开模型细节可能带来对抗性操纵风险，公开目标与数据来源则更可行——这是治理设计中典型的权衡。</span></div>'
+    }
+  ];
+
+  /* ---------------- 数据：竞赛 ---------------- */
+  var COMPS = [
+    { n:'01', name:'全国大学生广告艺术大赛', alias:'大广赛 · 教育部高教司指导', lvl:'国家级 A 类',
+      time:'校赛 3—5 月 / 省赛 6 月 / 国赛 7—8 月', form:'命题创作 · 团队 1—5 人',
+      desc:'以企业真实命题驱动的创意赛事，完整训练"洞察—策略—创意—执行"链路，是新媒体专业最对口的赛事之一。',
+      tags:['策划案','短视频','文案','互动H5'],
+      tips:'先把命题拆成一页 brief（目标人群 / 使用场景 / 竞品表达）；Big idea 必须能一句话说清；媒介排期要与预算和时间节点对得上。' },
+    { n:'02', name:'中国大学生计算机设计大赛', alias:'4C · 数媒与 AI 应用', lvl:'国家级',
+      time:'校内选拔 3—4 月 / 省赛 5 月 / 国赛 7 月', form:'作品提交 + 答辩',
+      desc:'设数媒设计、软件应用、AI 应用等多个大类，适合把交互作品、数据可视化或智能应用做成完整产品。',
+      tags:['交互设计','数据可视化','作品答辩'],
+      tips:'赛道选择比技术堆叠更重要；准备 5 分钟版本与 90 秒版本两套演示；答辩重点讲"解决了谁的什么问题"，而不是功能清单。' },
+    { n:'03', name:'中国数据新闻大赛', alias:'Data Journalism', lvl:'国家级',
+      time:'报名 4—6 月 / 作品 9 月截止', form:'数据新闻作品 · 网页或图文',
+      desc:'考察选题价值、数据获取与清洗、可视化设计与叙事能力，是"数据 + 传播"复合能力的最佳检验场。',
+      tags:['数据清洗','可视化','叙事','前端'],
+      tips:'选题优先于技术：找"可被数据回答的公共问题"；保留数据来源与清洗脚本；图表不超过 5 种类型，图注写结论而不是写指标名。' },
+    { n:'04', name:'全国大学生市场调查与分析大赛', alias:'市调大赛', lvl:'国家级',
+      time:'初赛 10—11 月 / 复赛次年 3—4 月 / 决赛 5 月', form:'调研报告 + 答辩',
+      desc:'从方案设计、抽样、问卷到建模与报告的完整实证训练，适合用户研究方向，也可为毕设积累数据。',
+      tags:['问卷设计','抽样','统计建模','报告'],
+      tips:'抽样方案要写清误差来源；别用复杂模型掩盖问题定义不清；结论必须回到可执行的建议，否则只是数据陈列。' },
+    { n:'05', name:'中国国际大学生创新大赛', alias:'原"互联网+"· 高教主赛道', lvl:'国家级 A 类',
+      time:'校赛 3—5 月 / 省赛 6—7 月 / 国赛 9—10 月', form:'商业计划书 + 路演',
+      desc:'偏创业与产业化，适合把新媒体产品、内容 IP 或技术服务做成可落地的项目，考验团队分工与商业叙事。',
+      tags:['BP','路演','团队协作','商业模式'],
+      tips:'路演三件套：一句话定位、一张增长曲线、一个可信的团队；财务预测要能与获客成本互相印证，评委最常追问单位经济模型。' },
+    { n:'06', name:'时报金犊奖', alias:'Times Young Creative Awards', lvl:'国际华文赛事',
+      time:'命题发布 3 月 / 收件 5—6 月', form:'广告创意 · 个人或团队',
+      desc:'面向华文青年的广告创意奖项，命题常含品牌、公益与地方文旅，适合积累概念型作品与创意履历。',
+      tags:['创意概念','影视广告','品牌文案'],
+      tips:'概念要"陌生又合理"；同一个 idea 至少做三版执行再选；提交前检查品牌规范与命题的硬性要求，细节失分最可惜。' }
+  ];
+
+  /* ---------------- 工具函数 ---------------- */
+  function plain(html){ return html.replace(/<[^>]+>/g,' ').replace(/\s+/g,' '); }
+  function catName(key){ for(var i=0;i<CATS.length;i++){ if(CATS[i].key===key) return CATS[i].name; } return ''; }
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function highlight(text,q){
+    if(!q) return text;
+    var safe = esc(text);
+    try{
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')','gi');
+      return safe.replace(re,'<mark>$1</mark>');
+    }catch(e){ return safe; }
+  }
+  function shortDate(d){ return d.slice(5).replace('-','.'); }
+
+  var state = { q:'', cat:'all', active:'n01' };
+
+  /* ---------------- 渲染：分类 ---------------- */
+  function renderCats(){
+    var html = '';
+    CATS.forEach(function(c){
+      var count = NOTES.filter(function(n){ return n.cat===c.key; }).length;
+      html += '<button class="cat-card" data-cat="' + c.key + '">' +
+        '<span class="ico">' + ICONS[c.icon] + '</span>' +
+        '<span class="cn">' + c.name + '</span>' +
+        '<span class="en">' + c.en + '</span>' +
+        '<p>' + c.desc + '</p>' +
+        '<span class="cat-foot"><span class="cnt">' + (count<10?'0'+count:count) + ' 篇笔记</span>' +
+        '<span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>' +
+        '</button>';
+    });
+    $('#catGrid').innerHTML = html;
+    $$('#catGrid .cat-card').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        state.cat = btn.getAttribute('data-cat');
+        renderChips();
+        applyFilter();
+        document.getElementById('notes').scrollIntoView({behavior:'smooth',block:'start'});
+        toast('已筛选：' + catName(state.cat));
+      });
+    });
+  }
+
+  /* ---------------- 渲染：最近更新 ---------------- */
+  function renderRecent(){
+    var list = NOTES.slice(0,4);
+    $('#recentList').innerHTML = list.map(function(n){
+      return '<button data-id="' + n.id + '"><span class="d">' + shortDate(n.date) + '</span><span class="t">' + n.title + '</span></button>';
+    }).join('');
+    $$('#recentList button').forEach(function(b){
+      b.addEventListener('click', function(){
+        state.cat = 'all'; state.q = ''; syncInputs('');
+        renderChips(); applyFilter();
+        selectNote(b.getAttribute('data-id'), true);
+        document.getElementById('notes').scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  }
+
+  /* ---------------- 渲染：筛选条 ---------------- */
+  function renderChips(){
+    var all = '<button class="chip' + (state.cat==='all'?' on':'') + '" data-cat="all">全部<em>' + NOTES.length + '</em></button>';
+    var rest = CATS.map(function(c){
+      var count = NOTES.filter(function(n){ return n.cat===c.key; }).length;
+      return '<button class="chip' + (state.cat===c.key?' on':'') + '" data-cat="' + c.key + '">' + c.name + '<em>' + count + '</em></button>';
+    }).join('');
+    $('#chips').innerHTML = all + rest;
+    $$('#chips .chip').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        state.cat = btn.getAttribute('data-cat');
+        renderChips(); applyFilter();
+      });
+    });
+  }
+
+  function filtered(){
+    var q = state.q.trim().toLowerCase();
+    return NOTES.filter(function(n){
+      if(state.cat !== 'all' && n.cat !== state.cat) return false;
+      if(!q) return true;
+      var hay = (n.title + ' ' + n.summary + ' ' + catName(n.cat) + ' ' + n.tags.join(' ') + ' ' + plain(n.body)).toLowerCase();
+      return hay.indexOf(q) > -1;
+    });
+  }
+
+  function renderList(list){
+    var q = state.q.trim();
+    if(!list.length){
+      $('#noteList').innerHTML = '<div class="empty"><b>没有找到相关笔记</b><p>换个关键词试试，比如"算法""舆情""AIGC"，或点击"全部"查看全部 12 篇。</p></div>';
+      return;
+    }
+    $('#noteList').innerHTML = list.map(function(n){
+      return '<button class="note-item' + (n.id===state.active?' is-active':'') + '" data-id="' + n.id + '">' +
+        '<span class="ni-top"><span class="ni-cat">' + catName(n.cat) + '</span><span class="ni-date">' + shortDate(n.date) + '</span></span>' +
+        '<span class="ni-title">' + highlight(n.title,q) + '</span>' +
+        '<span class="ni-ex">' + highlight(n.summary,q) + '</span>' +
+        '</button>';
+    }).join('');
+    $$('#noteList .note-item').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        selectNote(btn.getAttribute('data-id'));
+        if(window.matchMedia('(max-width:860px)').matches){
+          var rd = document.getElementById('reader');
+          setTimeout(function(){ rd.scrollIntoView({behavior:'smooth', block:'start'}); }, 80);
+        }
+      });
+    });
+  }
+
+  /* ---------------- 渲染：详情 ---------------- */
+  function renderReader(n){
+    if(!n){
+      $('#reader').innerHTML = '<div class="empty" style="padding:110px 20px"><b>没有可显示的笔记</b><p>试着清空搜索条件，或切换到其他分类。</p></div>';
+      return;
+    }
+    var rel = NOTES.filter(function(x){ return x.cat===n.cat && x.id!==n.id; }).slice(0,2);
+    var relHtml = rel.map(function(x){ return '<button class="rel-link" data-id="' + x.id + '">' + x.title + '</button>'; }).join('');
+    var tagsHtml = n.tags.map(function(t){ return '<span>#' + t + '</span>'; }).join('');
+    var idx = NOTES.indexOf(n) + 1;
+    var idxStr = idx < 10 ? '0' + idx : '' + idx;
+
+    $('#reader').innerHTML =
+      '<div class="fade-in">' +
+        '<div class="reader-head">' +
+          '<span class="r-cat">' + catName(n.cat) + '</span>' +
+          '<span class="r-meta">' + n.date + ' · ' + n.read + ' · 笔记 ' + idxStr + ' / ' + NOTES.length + '</span>' +
+        '</div>' +
+        '<h3 class="r-title">' + n.title + '</h3>' +
+        '<p class="r-sub">' + n.summary + '</p>' +
+        '<div class="prose">' + n.body + '</div>' +
+        '<div class="r-foot">' +
+          '<div class="r-tags">' + tagsHtml + '</div>' +
+          '<div class="r-actions">' +
+            '<button class="act" id="actCopy"><span>复制要点</span></button>' +
+            '<button class="act" id="actFav"><span>收藏</span></button>' +
+          '</div>' +
+        '</div>' +
+        (relHtml ? '<div class="r-rel"><span class="lbl">同类笔记</span>' + relHtml + '</div>' : '') +
+      '</div>';
+
+    $$('#reader .rel-link').forEach(function(b){
+      b.addEventListener('click', function(){ selectNote(b.getAttribute('data-id')); });
+    });
+
+    var copyBtn = $('#actCopy');
+    copyBtn.addEventListener('click', function(){
+      var text = n.title + '\n\n' + n.summary + '\n\n来源：薛彤的知识库 · ' + catName(n.cat);
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){ toast('已复制笔记要点'); },
+          function(){ toast('复制失败，请手动选择'); });
+      }else{
+        toast('当前环境不支持自动复制');
+      }
+      copyBtn.classList.add('done');
+      copyBtn.querySelector('span').textContent = '已复制';
+      setTimeout(function(){ copyBtn.classList.remove('done'); copyBtn.querySelector('span').textContent = '复制要点'; },1800);
+    });
+
+    var favBtn = $('#actFav');
+    favBtn.addEventListener('click', function(){
+      var on = favBtn.classList.toggle('done');
+      favBtn.querySelector('span').textContent = on ? '已收藏' : '收藏';
+      toast(on ? '已加入收藏' : '已取消收藏');
+    });
+  }
+
+  function selectNote(id, skipRender){
+    var n = null;
+    for(var i=0;i<NOTES.length;i++){ if(NOTES[i].id===id){ n = NOTES[i]; break; } }
+    if(!n) return;
+    state.active = id;
+    if(!skipRender){ renderList(filtered()); }
+    renderReader(n);
+  }
+
+  function applyFilter(){
+    var list = filtered();
+    var q = state.q.trim();
+    $('#noteCount').textContent = q
+      ? '找到 ' + list.length + ' 篇 · "' + q + '"'
+      : (state.cat === 'all' ? '共 ' + NOTES.length + ' 篇' : catName(state.cat) + ' · ' + list.length + ' 篇');
+
+    var hasActive = list.some(function(n){ return n.id === state.active; });
+    if(!hasActive && list.length){ state.active = list[0].id; }
+    renderList(list);
+    renderReader(list.length ? (list.filter(function(n){return n.id===state.active;})[0] || list[0]) : null);
+  }
+
+  function syncInputs(v){
+    if($('#qHero').value !== v) $('#qHero').value = v;
+    if($('#qNotes').value !== v) $('#qNotes').value = v;
+    $('#clearHero').hidden = !v;
+  }
+
+  function bindSearch(){
+    var hero = $('#qHero'), box = $('#qNotes');
+    function onInput(e){
+      state.q = e.target.value;
+      var v = state.q;
+      if(e.target === hero){ box.value = v; } else { hero.value = v; }
+      $('#clearHero').hidden = !v;
+      applyFilter();
+    }
+    hero.addEventListener('input', onInput);
+    box.addEventListener('input', onInput);
+    hero.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){
+        e.preventDefault();
+        document.getElementById('notes').scrollIntoView({behavior:'smooth',block:'start'});
+      }
+      if(e.key === 'Escape'){ hero.value=''; state.q=''; syncInputs(''); applyFilter(); }
+    });
+    box.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ box.value=''; state.q=''; syncInputs(''); applyFilter(); }
+    });
+    $('#clearHero').addEventListener('click', function(){
+      state.q = ''; syncInputs(''); applyFilter(); hero.focus();
+    });
+    $('#navSearch').addEventListener('click', function(){
+      var target = window.scrollY > 500 ? box : hero;
+      target.scrollIntoView({behavior:'smooth',block:'center'});
+      setTimeout(function(){ target.focus({preventScroll:true}); }, 420);
+    });
+    document.addEventListener('keydown', function(e){
+      var tag = (document.activeElement || {}).tagName;
+      if(e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA'){
+        e.preventDefault();
+        var target = window.scrollY > 700 ? box : hero;
+        target.scrollIntoView({behavior:'smooth',block:'center'});
+        setTimeout(function(){ target.focus({preventScroll:true}); }, 380);
+      }
+    });
+  }
+
+  /* ---------------- 渲染：竞赛 ---------------- */
+  function renderComps(){
+    $('#compGrid').innerHTML = COMPS.map(function(c){
+      return '<article class="comp">' +
+        '<div class="comp-top"><span class="idx">NO. ' + c.n + '</span><span class="lvl">' + c.lvl + '</span></div>' +
+        '<h3>' + c.name + '</h3>' +
+        '<p class="alias">' + c.alias + '</p>' +
+        '<div class="meta-line"><span>' + c.time + '</span><i></i><span>' + c.form + '</span></div>' +
+        '<p class="desc">' + c.desc + '</p>' +
+        '<div class="comp-tags">' + c.tags.map(function(t){ return '<span>' + t + '</span>'; }).join('') + '</div>' +
+        '<div class="comp-tips"><span class="k">备赛要点</span><p>' + c.tips + '</p></div>' +
+        '<div class="bar"></div>' +
+        '</article>';
+    }).join('');
+  }
+
+  /* ---------------- Toast ---------------- */
+  var toastTimer;
+  function toast(msg){
+    var t = $('#toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 1900);
+  }
+
+  /* ---------------- 滚动交互 ---------------- */
+  function bindScroll(){
+    var topbar = $('#topbar'), progress = $('#progress'), toTop = $('#toTop');
+    var links = $$('#navLinks a'), railLinks = $$('#rail a');
+    var secs = ['portal','method','cats','notes','comps','footer'];
+
+    function onScroll(){
+      var y = window.scrollY || document.documentElement.scrollTop;
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (h > 0 ? (y / h * 100) : 0) + '%';
+      topbar.classList.toggle('scrolled', y > 24);
+      toTop.classList.toggle('show', y > 620);
+
+      var cur = 'portal';
+      for(var i=0;i<secs.length;i++){
+        var el = document.getElementById(secs[i]);
+        if(el && el.getBoundingClientRect().top <= 140) cur = secs[i];
+      }
+      links.forEach(function(a){
+        a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+      });
+      railLinks.forEach(function(a){
+        a.classList.toggle('on', a.getAttribute('data-sec') === cur);
+      });
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll);
+    onScroll();
+
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  }
+
+  /* ---------------- 进场动画 ---------------- */
+  function bindReveal(){
+    var els = $$('.reveal');
+    var root = document.documentElement;
+    if(!('IntersectionObserver' in window)){
+      return;
+    }
+    root.classList.add('js-reveal');
+    var fired = false;
+    var io = new IntersectionObserver(function(entries){
+      fired = true;
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:0.06, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+    /* 兜底一：已进入视口的区块直接显示，保证首屏内容始终可读 */
+    setTimeout(function(){
+      els.forEach(function(el){
+        var r = el.getBoundingClientRect();
+        if(r.top < window.innerHeight) { el.classList.add('in'); }
+      });
+      /* 兜底二：观察器完全失效时，关闭动画，让所有内容可见 */
+      if(!fired){ root.classList.remove('js-reveal'); }
+    }, 1400);
+  }
+
+  /* ---------------- 初始化 ---------------- */
+  renderCats();
+  renderRecent();
+  renderChips();
+  renderComps();
+  renderList(NOTES);
+  renderReader(NOTES[0]);
+  bindSearch();
+  bindScroll();
+  bindReveal();
+  $('#statNotes').textContent = NOTES.length < 10 ? '0' + NOTES.length : NOTES.length;
+})();
+</script>
+</body>
+</html>
